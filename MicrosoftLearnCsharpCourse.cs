@@ -46,3 +46,46 @@ var message = "Hello World!"; // var no es igual a en JS solo le dice al compila
 //message = 10.703m;//(2,11): error CS0029: Cannot implicitly convert type 'decimal' to 'string'
 
 Console.WriteLine(34.40M);
+
+Console.WriteLine(@"  texto con formato
+                            esto sirve para json y dto.");
+
+// Kon'nichiwa World
+Console.WriteLine("\u3053\u3093\u306B\u3061\u306F World!"); // parece que tengo que tener los caracteres instalados para verlos
+
+// combinacion de interpolacion de cadenas y cadenas literales, mejor que JS
+// projectName = "First-Project";
+// Console.WriteLine($@"C:\output\{projectName}\app");
+
+string projectName = "ACME";
+
+string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";
+
+Console.WriteLine($@"View English output:
+    c:\Excercise\{projectName}\data.txt
+");
+Console.WriteLine($@"{russianMessage}:
+    c:\Excercise\{projectName}\ru-RU\data.txt");
+
+/**
+ * View English output:
+ *      c:\Excercise\ACME\data.txt
+ *
+ * Посмотреть русский вывод:
+ *      c:\Excercise\ACME\ru-RU\data.txt
+ */
+
+int divA = 5;
+int divB = 7;
+
+decimal division  = (decimal)divA / (decimal)divB;
+Console.WriteLine(division);
+Console.WriteLine("resto: " + divA % divB);
+
+Console.WriteLine("W " + 1 + 1);
+Console.WriteLine( 5/10 );
+
+// Crear nuevo proyecto de consola desde cli
+// dotnet new console -o ./CsharpProjects/TestProject
+// dotnet build construye el proyecto
+// dotnet run lo ejecuta

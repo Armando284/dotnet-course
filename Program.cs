@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq; // Para usar LINQ
 
-class Program
+class ProgramTest
 {
     // El punto de entrada del programa
     static void Main(string[] args)
