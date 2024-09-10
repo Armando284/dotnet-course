@@ -251,22 +251,41 @@
    to the console window.
  */
 
-string originalMessage = "The quick brown fox jumps over the lazy dog.";
+//string originalMessage = "The quick brown fox jumps over the lazy dog.";
 
-char[] message = originalMessage.ToCharArray();
-Array.Reverse(message);
+//char[] message = originalMessage.ToCharArray();
+//Array.Reverse(message);
 
-int letterCount = 0;
+//int letterCount = 0;
 
-foreach (char letter in message)
-{
-    if (letter == 'o')
-    {
-        letterCount++;
-    }
-}
+//foreach (char letter in message)
+//{
+//    if (letter == 'o')
+//    {
+//        letterCount++;
+//    }
+//}
 
-string newMessage = new String(message);
+//string newMessage = new String(message);
 
-Console.WriteLine(newMessage);
-Console.WriteLine($"'o' appears {letterCount} times.");
+//Console.WriteLine(newMessage);
+//Console.WriteLine($"'o' appears {letterCount} times.");
+
+// Scope!!!
+
+//bool flag = true;
+//if (flag)
+//{
+//    int value = 10;
+//    Console.WriteLine($"Inside the code block: {value}");
+//}
+////Console.WriteLine($"Outside the code block: {value}"); // error de scope la variable value no existe fuera del if
+
+//bool flag2 = true;
+//if (flag2)
+//    Console.WriteLine(flag); // igual que JS si es una sola linea no hacen falta las {} aunque mejoran legibilidad y generalmente hacen falta
+
+//string name = "steve";
+//if (name == "bob") Console.WriteLine("Found Bob");
+//else if (name == "steve") Console.WriteLine("Found Steve");
+//else Console.WriteLine("Found Chuck");
