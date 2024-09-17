@@ -418,3 +418,58 @@
 //} while (hero > 0 && monster > 0);
 
 //Console.WriteLine(hero > monster ? "Hero wins!" : "Monster wins!");
+
+
+// operadores logicos
+
+//string pangram = "The quick brown fox jumps over the lazy dog.";
+//Console.WriteLine(!pangram.Contains("fox"));
+//Console.WriteLine(!pangram.Contains("cow"));
+
+//int a = 7;
+//int b = 6;
+//Console.WriteLine(a != b); // output: True
+//string s1 = "Hello";
+//string s2 = "Hello";
+//Console.WriteLine(s1 != s2); // output: False
+
+//int saleAmount = 1001;
+//int discount = saleAmount > 1000 ? 100 : 50;
+//Console.WriteLine($"Discount: {discount}");
+//Console.WriteLine($"Discount: {(saleAmount > 1000 ? 100 : 50)}");
+
+
+// ARRAYS
+string[] pallets = { "B14", "A11", "B12", "A13" };
+Array.Sort(pallets);
+foreach (var pallet in pallets)
+{
+    Console.WriteLine($"--{pallet}");
+}
+
+//Array.Clear(pallets, 1,2);
+//foreach (var pallet in pallets)
+//{
+//	Console.WriteLine($"--{pallet}");
+//}
+
+Array.Resize(ref pallets, 6);
+foreach (var pallet in pallets)
+{
+	Console.WriteLine($"--{pallet}");
+}
+
+// Resize tambien se puede usar para quitar elementos
+
+string value = "abc123";
+char[] valueArray = value.ToCharArray(); // divide el string en un array de char
+Array.Reverse(valueArray);
+//string result = new string (valueArray);
+string result = String.Join(",", valueArray); // 👌
+Console.WriteLine(result);
+
+string[] items = result.Split(',');
+foreach (var item in items)
+{
+	Console.WriteLine($"--{item}");
+}
